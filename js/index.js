@@ -2,11 +2,6 @@
  * Created by Артем on 05.12.2016.
  */
 
-var markerGroups = {
-    "hospital": [],
-    "clinic": [],
-    "psyHospital": []
-};
 
 var clinic, hospital, psyHospital;
 var clinicArr = [];
@@ -111,30 +106,40 @@ function initMap() {
 }
 
 
-function removeClinic() {
-    for (var i = 0; i < clinicArr.length; i++) {
-        clinicArr[i].setMap(null);
-    }
-}
-function removeHospital() {
-    for (var i = 0; i < hospitalArr.length; i++) {
-        hospitalArr[i].setMap(null);
-    }
-}
-function removePsy() {
-    for (var i = 0; i < psyArr.length; i++) {
-        psyArr[i].setMap(null);
+function remove(nameArr) {
+    for (var i = 0; i < nameArr.length; i++) {
+        nameArr[i].setMap(null);
     }
 }
 
-function delClinic() {
+function changeClinic() {
     var checkbox = document.getElementById('checkbox1');
     if (!checkbox.checked) {
-        removeClinic();
+        remove(clinicArr);
     } else {
         clinic();
     }
 }
+function changeHospital() {
+    var checkbox = document.getElementById('checkbox2');
+    if (!checkbox.checked) {
+        remove(hospitalArr);
+    } else {
+        hospital();
+    }
+}
+function changePsy() {
+    var checkbox = document.getElementById('checkbox3');
+    if (!checkbox.checked) {
+        remove(psyArr);
+    } else {
+        psyHospital();
+    }
+}
+
+
+
+
 
 function ok() {
     var look = document.getElementsByClassName("markerController")[0];
