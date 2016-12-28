@@ -1,16 +1,7 @@
 /**
  * Created by Артем on 05.12.2016.
  */
-// var icons = {
-//   hospital: {
-//       icon: "img/hospital.png"
-//   },
-//     clinic: {
-//       icon: "img/clinic.png"
-//     },
-//     psyHospital: "img/therapy.png"
-//
-// };
+
 var markerGroups = {
     "hospital": [],
     "clinic": [],
@@ -27,27 +18,55 @@ function initMap() {
         zoom: 6,
         center: centerMap
     });
+//******************************************
+    var posMark = {
+        clinicMark: {
+            pos1: {
+                lat: 50.431403,
+                lng: 33.167882
+            },
+            pos2: {
+                lat: 50.983668,
+                lng: 31.152127
+            }
+        },
+        hospitalMark: {
+            pos1: {
+                lat: 49.665129,
+                lng: 30.690702
+            },
+            pos2: {
+                lat: 48.775368,
+                lng: 33.107694
+            }
+        },
+        psyMark: {
+            pos1: {
+                lat: 50.817379,
+                lng: 28.032010
+            },
+            pos2: {
+                lat: 49.250945,
+                lng: 29.196561
+            }
+        }
+    };
+//     var posMark = [[[50.431403, 33.167882], [50.983668, 31.152127]],
+//         [[49.665129, 30.690702], [48.775368, 33.107694]],
+//         [[50.817379, 28.032010], [49.250945, 29.196561]]];
 
     clinic = function () {
 
-
-        var pos = {
-            lat: 50.431403,
-            lng: 33.167882
-        };
         var markerClinic = new google.maps.Marker({
-            position: pos,
+            position: posMark.clinicMark.pos1,
             map: map,
             icon: "img/clinic.png"
         });
         clinicArr.push(markerClinic);
 //****************************************************
-        pos = {
-            lat: 50.983668,
-            lng: 31.152127
-        };
+
         markerClinic = new google.maps.Marker({
-            position: pos,
+            position: posMark.clinicMark.pos2,
             map: map,
             icon: "img/clinic.png"
         });
@@ -55,24 +74,15 @@ function initMap() {
     };
     hospital =  function () {
 
-
-        var pos = {
-            lat: 49.665129,
-            lng: 30.690702
-        };
         var markerHospital = new google.maps.Marker({
-            position: pos,
+            position: posMark.hospitalMark.pos1,
             map: map,
             icon: "img/hospital.png"
         });
         hospitalArr.push(markerHospital);
 //****************************************************
-        pos = {
-            lat: 48.775368,
-            lng: 33.107694
-        };
         markerHospital = new google.maps.Marker({
-            position: pos,
+            position: posMark.hospitalMark.pos2,
             map: map,
             icon: "img/hospital.png"
         });
@@ -80,24 +90,15 @@ function initMap() {
     };
     psyHospital = function() {
 
-
-        var pos = {
-            lat: 50.817379,
-            lng: 28.032010
-        };
         var markerPsy = new google.maps.Marker({
-            position: pos,
+            position: posMark.psyMark.pos1,
             map: map,
             icon: "img/therapy.png"
         });
         psyArr.push(markerPsy);
 //****************************************************
-        pos = {
-            lat: 49.250945,
-            lng: 29.196561
-        };
         markerPsy = new google.maps.Marker({
-            position: pos,
+            position: posMark.psyMark.pos2,
             map: map,
             icon: "img/therapy.png"
         });
@@ -134,29 +135,12 @@ function delClinic() {
         clinic();
     }
 }
-//Появление контроллера***************************************************
-// var mark = document.getElementsByClassName("book")[0];
-// function see () {
-//     var look = document.getElementsByClassName("markerController")[0];
-//     // look.style.display = "block";
-//     look.classList.toggle("newBook");
-// }
-// mark.addEventListener("click", see);
+
 function ok() {
     var look = document.getElementsByClassName("markerController")[0];
     look.classList.toggle("newBook")
 }
-
-
-// var mark2 = document.getElementsByClassName("newBook");
-// function see2 () {
-//     var look = document.getElementsByClassName("markerController")[0];
-//     look.style.display = "none";
-//     mark.className = "book";
-// }
-// mark2.addEventListener("click", see2);
-
-
+//====================================================================================
 function seeMarkers() {
     var marker = document.getElementsByClassName("layers-controller")[0];
     marker.style.display = "flex";
