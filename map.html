@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="app-header"><p>Veteran Care Network</p></div>
+    </header>
+    <div class="map-nav">
+        <div class="navigation map"></div>
+        <div class="navigation loupe"></div>
+        <div class="navigation book" id="markerController" onclick="ok()"></div>
+        <div class="markerController">
+            <div class="L-L">
+                <input class="chose-layer" type="button" value="Layers" onclick="seeMarkers()">
+                <input class="chose-legend" type="button" value="Legend" onclick="seeLegend()">
+            </div>
+            <div class="layers-controller">
+                <div class="markers">
+                    <p class="marker-type">Clinics</p>
+                    <p class="switch">
+                        <input id="checkbox1" onclick="delClinic()" type="checkbox" checked = 'checked'>
+                        <label for="checkbox1"></label>
+                    </p>
+                </div>
+                <div class="markers">
+                    <p class="marker-type">Hospitals</p>
+                    <p class="switch">
+                        <input id="checkbox2" onclick="removeHospital()" checked="checked" type="checkbox">
+                        <label for="checkbox2"></label>
+                </div>
+                <div class="markers">
+                    <p class="marker-type">Psychiatric Hospitals</p>
+                    <p class="switch">
+                        <input id="checkbox3" onclick="removePsy()" checked="checked" type="checkbox">
+                        <label for="checkbox3"></label>
+                </div>
+            </div>
+            <div class="legend-box">
+                <div class="legend"><p>Clinics</p><img src="img/clinic.png" alt=""></div>
+                <div class="legend"><p>Hospitals</p><img src="img/hospital.png" alt=""></div>
+                <div class="legend"><p>Psychiatric Hospital</p><img src="img/therapy.png" alt=""></div>
+            </div>
+        </div>
+
+        <div class="navigation help"></div>
+    </div>
+    <div class="content">
+        <div id="map" style="width: 100%; height: 500px"></div>
+    </div>
+    <footer>
+        <div class="app-footer">
+            <a class="index-link" href="index.html"></a>
+            <a class="map-link" href="map.html"></a>
+            <a class="about-link" href="about.html"></a>
+            <a class="contact-link" href="contact.html"></a>
+        </div>
+    </footer>
+</div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmnOTyggcGIzDmYcjJnOVU_mToWV6_J1Y&callback=initMap">
+</script>
+<script src="js/index.js"></script>
+</body>
+</html>

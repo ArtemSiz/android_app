@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    box-sizing: border-box;
+    width: 100%;
+    height: 560px;
+}
+
+.app-header {
+    height: 50px;
+    background: #0E0E7C;
+    text-align: center;
+}
+
+.app-header p {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.flag {
+    height: 60px;
+    background: url("../img/flag(2).png") center no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.content {
+    text-align: justify;
+    padding: 0 20px;
+    background: #eee;
+    background-size: cover;
+}
+
+.content p {
+    font-size: 18px;
+}
+.content .star {
+    background: url("../img/star_black.png") center no-repeat;
+    background-size: contain;
+    width: 35%;
+    height: 60px;
+    margin: 0 auto;
+}
+.content h2 {
+    text-align: center;
+}
+
+.app-footer a {
+    text-decoration: none;
+    width: 24%;
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+}
+
+
+.image {
+    width: 40px;
+    height: 40px;
+}
+
+.content {
+    min-height: calc(100vh - 80px);
+}
+
+footer {
+    background: blue;
+    height: 80px;
+}
+
+.app-footer .index-link {
+    height: 66px;
+    text-align: center;
+    background: url("../img/home(1).png") no-repeat center;
+    background-size: contain;
+}
+
+.app-footer .index-link:active {
+    background: url("../img/home(3).png") no-repeat center;
+    background-size: contain;
+}
+
+.app-footer .map-link {
+    height: 66px;
+    text-align: center;
+    background: url("../img/blue_map(1).png") no-repeat center;
+    background-size: contain;
+}
+
+.app-footer .map-link:active {
+    background: url("../img/blue_map(3).png") no-repeat center;
+    background-size: contain;
+}
+
+.app-footer .about-link {
+    height: 66px;
+    text-align: center;
+    background: url("../img/about(1).png") no-repeat center;
+    background-size: contain;
+}
+
+.app-footer .about-link:active {
+    background: url("../img/about(3).png") no-repeat center;
+    background-size: contain;
+}
+
+.app-footer .contact-link {
+    height: 66px;
+    text-align: center;
+    background: url("../img/contact(1).png") no-repeat center;
+    background-size: contain;
+}
+
+.app-footer .contact-link:active {
+    background: url("../img/contact(3).png") no-repeat center;
+    background-size: contain;
+}
+
+.contact-info .e-mail {
+    font-size: 18px;
+    font-weight: bold;
+    color: #993112;
+}
+
+.contact-info .number {
+    font-size: 20px;
+    font-weight: bold;
+}
+.contact-info span {
+    color: #8b8b8b;
+    font-size: 18px;
+}
