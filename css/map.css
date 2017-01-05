@@ -1,7 +1,6 @@
-/*.wrapper {*/
-    /*position: relative;*/
-    /*z-index: 1;*/
-/*}*/
+.content {
+    padding: 0;
+}
 .map-nav {
     position: relative;
     background-color: rgba(255, 255, 255, 0.5);
@@ -12,7 +11,7 @@
     display: inline-block;
     width: 24%;
     height: 40px;
-    /*color: #ffffff;*/
+    margin-top: 5px;
     z-index: 3;
 }
 
@@ -52,6 +51,7 @@
     left: 0;
     right: 0;
 }
+
 
 .L-L {
     display: flex;
