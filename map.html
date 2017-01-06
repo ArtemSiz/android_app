@@ -11,47 +11,47 @@
     <header>
         <div class="app-header"><p>Veteran Care Network</p></div>
     </header>
-    <div class="map-nav">
-        <div class="navigation map"></div>
-        <div class="navigation loupe"></div>
-        <div class="navigation book" id="markerController" onclick="ok()"></div>
-        <div class="markerController">
-            <div class="L-L">
-                <input class="chose-layer" type="button" value="Layers" onclick="seeMarkers()">
-                <input class="chose-legend" type="button" value="Legend" onclick="seeLegend()">
-            </div>
-            <div class="layers-controller">
-                <div class="markers">
-                    <p class="marker-type">Clinics</p>
-                    <p class="switch">
-                        <input id="checkbox1" onclick="changeClinic()" type="checkbox" checked = 'checked'>
-                        <label for="checkbox1"></label>
-                    </p>
+    <div class="content">
+        <div class="map-nav">
+            <div class="navigation map"></div>
+            <div class="navigation loupe"></div>
+            <div class="navigation book" id="markerController" onclick="ok()"></div>
+            <div class="markerController">
+                <div class="L-L">
+                    <input class="chose-layer" type="button" value="Layers" onclick="seeMarkers()">
+                    <input class="chose-legend" type="button" value="Legend" onclick="seeLegend()">
                 </div>
-                <div class="markers">
-                    <p class="marker-type">Hospitals</p>
-                    <p class="switch">
-                        <input id="checkbox2" onclick="changeHospital()" checked="checked" type="checkbox">
-                        <label for="checkbox2"></label>
+                <div class="layers-controller">
+                    <div class="markers">
+                        <p class="marker-type">Clinics</p>
+                        <p class="switch">
+                            <input id="checkbox1" onclick="changeClinic()" type="checkbox" checked='checked'>
+                            <label for="checkbox1"></label>
+                        </p>
+                    </div>
+                    <div class="markers">
+                        <p class="marker-type">Hospitals</p>
+                        <p class="switch">
+                            <input id="checkbox2" onclick="changeHospital()" checked="checked" type="checkbox">
+                            <label for="checkbox2"></label>
+                    </div>
+                    <div class="markers">
+                        <p class="marker-type">Psychiatric Hospitals</p>
+                        <p class="switch">
+                            <input id="checkbox3" onclick="changePsy()" checked="checked" type="checkbox">
+                            <label for="checkbox3"></label>
+                    </div>
                 </div>
-                <div class="markers">
-                    <p class="marker-type">Psychiatric Hospitals</p>
-                    <p class="switch">
-                        <input id="checkbox3" onclick="changePsy()" checked="checked" type="checkbox">
-                        <label for="checkbox3"></label>
+                <div class="legend-box">
+                    <div class="legend"><p>Clinics</p><img src="img/clinic.png" alt=""></div>
+                    <div class="legend"><p>Hospitals</p><img src="img/hospital.png" alt=""></div>
+                    <div class="legend"><p>Psychiatric Hospital</p><img src="img/therapy.png" alt=""></div>
                 </div>
             </div>
-            <div class="legend-box">
-                <div class="legend"><p>Clinics</p><img src="img/clinic.png" alt=""></div>
-                <div class="legend"><p>Hospitals</p><img src="img/hospital.png" alt=""></div>
-                <div class="legend"><p>Psychiatric Hospital</p><img src="img/therapy.png" alt=""></div>
-            </div>
+            <div class="navigation help"></div>
         </div>
 
-        <div class="navigation help"></div>
-    </div>
-    <div class="content">
-        <div id="map" style="width: 100%; height: 500px"></div>
+        <div id="map"></div>
     </div>
     <footer>
         <div class="app-footer">
