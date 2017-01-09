@@ -18,27 +18,27 @@
             <div class="navigation book" id="markerController" onclick="ok()"></div>
             <div class="markerController">
                 <div class="L-L">
-                    <input class="chose-layer" type="button" value="Layers" onclick="seeMarkers()">
-                    <input class="chose-legend" type="button" value="Legend" onclick="seeLegend()">
+                    <input class="chose-layer" type="button" value="Layers">
+                    <input class="chose-legend" type="button" value="Legend">
                 </div>
                 <div class="layers-controller">
                     <div class="markers">
                         <p class="marker-type">Clinics</p>
                         <p class="switch">
-                            <input id="checkbox1" onclick="changeClinic()" type="checkbox" checked='checked'>
+                            <input id="checkbox1" onclick="change('checkbox1', clinicArr, clinic)" type="checkbox" checked='checked'>
                             <label for="checkbox1"></label>
                         </p>
                     </div>
                     <div class="markers">
                         <p class="marker-type">Hospitals</p>
                         <p class="switch">
-                            <input id="checkbox2" onclick="changeHospital()" checked="checked" type="checkbox">
+                            <input id="checkbox2" onclick="change('checkbox2', hospitalArr, hospital)" checked="checked" type="checkbox">
                             <label for="checkbox2"></label>
                     </div>
                     <div class="markers">
                         <p class="marker-type">Psychiatric Hospitals</p>
                         <p class="switch">
-                            <input id="checkbox3" onclick="changePsy()" checked="checked" type="checkbox">
+                            <input id="checkbox3" onclick="change('checkbox3', psyArr,psyHospital)" checked="checked" type="checkbox">
                             <label for="checkbox3"></label>
                     </div>
                 </div>
@@ -65,6 +65,8 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmnOTyggcGIzDmYcjJnOVU_mToWV6_J1Y&callback=initMap">
 </script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="js/index.js"></script>
+
 </body>
 </html>
