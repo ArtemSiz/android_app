@@ -5,8 +5,9 @@
 #map {
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 502px;
     z-index: 1;
+    margin: -47px 0 0 0;
 }
 .map-nav {
     position: relative;
@@ -16,6 +17,7 @@
 
 .map-nav .navigation {
     display: inline-block;
+    cursor: pointer;
     width: 24%;
     height: 40px;
     margin-top: 5px;
@@ -80,7 +82,54 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+/*преключатели маркиров*/
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label {
+    cursor: pointer;
+    position: relative;
+    line-height: 40px;
 
+}
+input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    height: 24px;
+    width: 56px;
+    margin: 0 15px 0 0;
+    vertical-align: middle;
+    background: #dddddd;
+    border: 1px solid #dadada;
+    border-radius: 12px;
+}
+input[type="checkbox"] + label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: -49px;
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+    background: #ffffff;
+    border: 1px solid #dadada;
+}
+
+input[type="checkbox"]:checked + label::before {
+    background: #4347aa;
+    border-color: #4347aa;
+}
+input[type="checkbox"]:checked + label::after {
+    left: -18px;
+}
+input[type="checkbox"] + label::before,
+input[type="checkbox"] + label::after {
+    transition: all .2s ease-out;
+}
 /*Маркеры по карте****************************************/
 .layers-controller {
     display: none;
