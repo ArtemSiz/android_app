@@ -30,6 +30,7 @@ body {
     background-size: cover;
     width: 100%;
 }
+
 .content {
     text-align: justify;
     padding: 0 20px;
@@ -41,6 +42,7 @@ body {
 .content p {
     font-size: 18px;
 }
+
 .content .star {
     background: url("../img/star_black.png") center no-repeat;
     background-size: contain;
@@ -48,6 +50,7 @@ body {
     height: 60px;
     margin: 0 auto;
 }
+
 .content h2 {
     text-align: center;
 }
@@ -59,7 +62,6 @@ body {
     list-style-type: none;
     text-align: center;
 }
-
 
 .image {
     width: 40px;
@@ -75,52 +77,36 @@ footer {
     background: blue;
     height: 80px;
 }
-
-.app-footer .index-link {
-    height: 66px;
-    text-align: center;
+.index-link {
     background: url("../img/home(1).png") no-repeat center;
-    background-size: contain;
 }
-
-.app-footer .index-link:active {
+.index-link:active {
     background: url("../img/home(3).png") no-repeat center;
-    background-size: contain;
 }
-
-.app-footer .map-link {
-    height: 66px;
-    text-align: center;
+.map-link {
     background: url("../img/blue_map(1).png") no-repeat center;
-    background-size: contain;
 }
-
-.app-footer .map-link:active {
+.map-link:active {
     background: url("../img/blue_map(3).png") no-repeat center;
-    background-size: contain;
 }
-
-.app-footer .about-link {
-    height: 66px;
-    text-align: center;
+.about-link {
     background: url("../img/about(1).png") no-repeat center;
-    background-size: contain;
 }
-
-.app-footer .about-link:active {
+.about-link:active {
     background: url("../img/about(3).png") no-repeat center;
-    background-size: contain;
+}
+.contact-link {
+    background: url("../img/contact(1).png") no-repeat center;
+}
+.contact-link:active {
+    background: url("../img/contact(3).png") no-repeat center;
 }
 
-.app-footer .contact-link {
+
+.index-link, .map-link, .about-link, .contact-link,
+.index-link:active, .map-link:active, .about-link:active, .contact-link:active {
     height: 66px;
     text-align: center;
-    background: url("../img/contact(1).png") no-repeat center;
-    background-size: contain;
-}
-
-.app-footer .contact-link:active {
-    background: url("../img/contact(3).png") no-repeat center;
     background-size: contain;
 }
 
@@ -134,7 +120,9 @@ footer {
     font-size: 20px;
     font-weight: bold;
 }
+
 .contact-info span {
     color: #8b8b8b;
     font-size: 18px;
 }
+

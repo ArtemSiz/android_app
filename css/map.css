@@ -25,18 +25,17 @@
 
 .map-nav .map {
     background: url("../img/map(1).png") no-repeat center;
-    background-size: contain;
 }
 .map-nav .loupe {
     background: url("../img/loupe(1).png") no-repeat center;
-    background-size: contain;
 }
 .map-nav .book {
     background: url("../img/book(1).png") no-repeat center;
-    background-size: contain;
 }
 .map-nav .help {
     background: url("../img/help(1).png") no-repeat center;
+}
+.map-nav .map, .map-nav .loupe, .map-nav .book, .map-nav .help {
     background-size: contain;
 }
 .markerController {
